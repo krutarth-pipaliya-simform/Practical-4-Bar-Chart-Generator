@@ -13,7 +13,7 @@ export const BarList = () => {
                         onClick={() => {
                             deleteBar(id);
                         }}
-                        className="bg-blue-500 rounded-lg"
+                        className="bg-blue-400 rounded-lg"
                     >
                         Delete
                     </button>

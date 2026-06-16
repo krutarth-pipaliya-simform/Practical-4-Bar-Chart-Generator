@@ -4,11 +4,9 @@ interface BarPropsType {
 }
 export const Bar = ({ label, height }: BarPropsType) => {
     return (
-        <div className="flex-1 flex flex-col max-w-20">
-            <div className=" bg-blue-400" style={{ height: `${height}%` }}>
-                Bar
-            </div>
-            <div className="relative bottom-0">{label}</div>
+        <div className="flex flex-col w-20 justify-end relative">
+            <div className=" bg-blue-400 w-20 rounded-t-2xl" style={{ height: `${height}%` }}></div>
+            <div className="text-center max-w-full truncate absolute top-full left-1/2 -translate-x-1/2">{label}</div>
         </div>
     );
 };

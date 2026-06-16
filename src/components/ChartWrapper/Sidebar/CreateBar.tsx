@@ -38,7 +38,7 @@ export const CreateBar = () => {
                 onChange={(e) => setYValue(e.target.value)}
                 className="border-2 rounded-lg"
             />
-            <button type="submit" className="bg-blue-500 rounded-lg">
+            <button type="submit" className="bg-blue-400 rounded-lg">
                 Create Bar
             </button>
         </form>
