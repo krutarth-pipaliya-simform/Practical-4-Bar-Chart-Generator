@@ -1,7 +1,7 @@
 import type { BarType } from "../../components/ChartWrapper/types";
 
 export const getLocalBars = () => {
-    let localBars = JSON.parse(localStorage.getItem("bars") ?? "");
+    let localBars = JSON.parse(localStorage.getItem("bars") ?? "[]");
     if (!(localBars instanceof Array)) {
         localStorage.setItem("bars", "[]");
         localBars = [];
