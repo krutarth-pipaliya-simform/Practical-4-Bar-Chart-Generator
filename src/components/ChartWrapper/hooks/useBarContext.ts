@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 import type { BarType } from "../types";
 
-export const BarContext = createContext<BarContextType>(null);
+export const BarContext = createContext<BarContextType | null>(null);
 
 export const useBarContext = () => {
     const data = useContext(BarContext);
