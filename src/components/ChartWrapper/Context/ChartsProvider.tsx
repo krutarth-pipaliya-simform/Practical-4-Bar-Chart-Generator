@@ -2,7 +2,7 @@ import { useState, type ReactNode } from "react";
 
 import { BarContext } from "../hooks/useBarContext";
 import type { BarType } from "../types";
-import { setLocalBars } from "../../../utils/helpers/syncLocalstorage";
+import { getLocalBars, setLocalBars } from "../../../utils/helpers/syncLocalstorage";
 
 interface BarProviderPropsType {
     children: ReactNode;
@@ -14,7 +14,7 @@ export const ChartsProvider = ({ children }: BarProviderPropsType) => {
 };
 
 const useBarsCreater = () => {
-    const [bars, setBars] = useState<Array<BarType>>([]);
+    const [bars, setBars] = useState<Array<BarType>>(getLocalBars());
     const createBar = (bar: BarType) => {
         setBars((prevBars) => {
             setLocalBars([...prevBars, bar]);
