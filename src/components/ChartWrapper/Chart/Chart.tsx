@@ -1,5 +1,4 @@
 import { CartesianPlain } from "./CartesianPlain";
-
 import { YAxis } from "./YAxis";
 
 export const Chart = () => {
