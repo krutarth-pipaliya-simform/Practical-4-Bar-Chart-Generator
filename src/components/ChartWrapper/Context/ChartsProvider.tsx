@@ -14,7 +14,7 @@ export const ChartsProvider = ({ children }: BarProviderPropsType) => {
 };
 
 const useBarsCreater = () => {
-    const [bars, setBars] = useState<Array<BarType>>(getLocalBars());
+    const [bars, setBars] = useState<Array<BarType>>(() => getLocalBars());
     const createBar = (bar: BarType) => {
         setBars((prevBars) => {
             setLocalBars([...prevBars, bar]);
