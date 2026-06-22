@@ -16,6 +16,8 @@ export const CreateBar = () => {
                     xLabel,
                     yValue: +yValue,
                 });
+                setXLabel("");
+                setYValue("");
             }}
             className="flex flex-col gap-4 border-2 p-4 rounded-lg"
         >
